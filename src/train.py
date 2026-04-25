@@ -1,5 +1,7 @@
 # src/train.py
 
+import os
+import joblib
 import mlflow
 import mlflow.sklearn
 
@@ -24,7 +26,7 @@ def train_and_log(model, model_name, params):
         preds = model.predict(X_test)
         acc = accuracy_score(y_test, preds)
 
-        # Log params
+        # Log parameters
         for key, value in params.items():
             mlflow.log_param(key, value)
 
@@ -42,28 +44,52 @@ def train_and_log(model, model_name, params):
 
         print(f"{model_name} -> Accuracy: {acc}")
 
+        return acc, model
+
 
 if __name__ == "__main__":
 
+    # Ensure models folder exists
+    os.makedirs("models", exist_ok=True)
+
+    mlflow.set_tracking_uri("file:./mlruns")
     mlflow.set_experiment("mlops-project")
 
-    # Run 1
-    train_and_log(
+    best_accuracy = 0
+    best_model = None
+
+    # 🔹 Run 1
+    acc, model = train_and_log(
         RandomForestClassifier(n_estimators=50),
         "RandomForest",
         {"n_estimators": 50}
     )
+    if acc > best_accuracy:
+        best_accuracy = acc
+        best_model = model
 
-    # Run 2
-    train_and_log(
+    # 🔹 Run 2
+    acc, model = train_and_log(
         RandomForestClassifier(n_estimators=100),
         "RandomForest",
         {"n_estimators": 100}
     )
+    if acc > best_accuracy:
+        best_accuracy = acc
+        best_model = model
 
-    # Run 3
-    train_and_log(
+    # 🔹 Run 3
+    acc, model = train_and_log(
         SVC(kernel="linear"),
         "SVM",
         {"kernel": "linear"}
     )
+    if acc > best_accuracy:
+        best_accuracy = acc
+        best_model = model
+
+    # ✅ Save best model
+    joblib.dump(best_model, "models/model.pkl")
+
+    print("\nBest Model Saved!")
+    print("Best Accuracy:", best_accuracy)
