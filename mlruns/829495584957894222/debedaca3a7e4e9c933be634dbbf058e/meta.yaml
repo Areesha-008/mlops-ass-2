@@ -1,0 +1,14 @@
+artifact_uri: file:C:/Users/Z/mlops-ass-2/mlruns/829495584957894222/debedaca3a7e4e9c933be634dbbf058e/artifacts
+end_time: 1777207793664
+entry_point_name: ''
+experiment_id: '829495584957894222'
+lifecycle_stage: active
+run_id: debedaca3a7e4e9c933be634dbbf058e
+run_name: delicate-shad-971
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1777207778478
+status: 3
+tags: []
+user_id: Z

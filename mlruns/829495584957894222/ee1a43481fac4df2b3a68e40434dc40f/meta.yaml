@@ -1,0 +1,14 @@
+artifact_uri: file:C:/Users/Z/mlops-ass-2/mlruns/829495584957894222/ee1a43481fac4df2b3a68e40434dc40f/artifacts
+end_time: 1777207803854
+entry_point_name: ''
+experiment_id: '829495584957894222'
+lifecycle_stage: active
+run_id: ee1a43481fac4df2b3a68e40434dc40f
+run_name: welcoming-newt-110
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1777207793697
+status: 3
+tags: []
+user_id: Z

@@ -1,0 +1,14 @@
+artifact_uri: file:C:/Users/Z/mlops-ass-2/mlruns/829495584957894222/299b9aced4434f208683ce8714688b75/artifacts
+end_time: 1777207820768
+entry_point_name: ''
+experiment_id: '829495584957894222'
+lifecycle_stage: active
+run_id: 299b9aced4434f208683ce8714688b75
+run_name: stylish-ape-760
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1777207803878
+status: 3
+tags: []
+user_id: Z

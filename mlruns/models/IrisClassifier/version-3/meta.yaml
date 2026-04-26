@@ -1,0 +1,16 @@
+creation_timestamp: 1777207820629
+current_stage: None
+deployment_job_state: null
+description: null
+last_updated_timestamp: 1777207820629
+model_id: m-cd7b540995b642a3a9ca3a08c50a9b94
+name: IrisClassifier
+run_id: 299b9aced4434f208683ce8714688b75
+run_link: null
+source: models:/m-cd7b540995b642a3a9ca3a08c50a9b94
+status: READY
+status_message: null
+storage_location: file:C:/Users/Z/mlops-ass-2/mlruns/829495584957894222/models/m-cd7b540995b642a3a9ca3a08c50a9b94/artifacts
+user_id: null
+version: 3
+workspace: default
